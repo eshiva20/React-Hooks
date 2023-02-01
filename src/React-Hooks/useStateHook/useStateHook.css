@@ -1,0 +1,28 @@
+body{
+    background-color: #AAE3E2;
+}
+.main{
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    color: #0b8c8a;
+    /* margin-top: 10%; */
+    font-size: 2rem;
+    align-items: center;
+}
+.btns{
+    background-color:#816d81;
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+.state-btn{
+    font-size: 5rem;
+    padding:0px 30px;
+    border-radius: 30%;
+    background-color: transparent;
+}
+span{
+    color: black;
+    font-size: 5rem;
+    padding:5px 40px;
+}

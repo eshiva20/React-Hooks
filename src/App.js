@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './App.css'
+import UseStateHook from "./React-Hooks/useStateHook/UseStateHook";
+import UseEffectHook from "./React-Hooks/useEffectHook/useEffectHook";
+import UseContextHook from "./React-Hooks/useContextHook/useContextHook";
+import UseMemoHook from "./React-Hooks/useMemoHook/useMemoHook";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+// import UseCallbackHook from './React-Hooks/useCallbackHook/useCallbackHook';
+import Main from './React-Hooks/Main';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/useStateHook" element={<UseStateHook />} />
+        <Route path="/useEffectHook" element={<UseEffectHook />} />
+        <Route path="/useContextHook" element={<UseContextHook />} />
+        <Route path="/useMemoHook" element={<UseMemoHook />} />
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
