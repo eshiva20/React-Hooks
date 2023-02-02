@@ -7,6 +7,8 @@ import UseMemoHook from "./React-Hooks/useMemoHook/useMemoHook";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UseCallbackHook from './React-Hooks/useCallbackHook/useCallbackHook';
 import Main from './React-Hooks/Main';
+import UseRefHook from './React-Hooks/useRefHook/useRefHook';
+import UseReducerHook from './React-Hooks/useReducerHook/useReducerHook';
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/useContextHook" element={<UseContextHook />} />
         <Route path="/useMemoHook" element={<UseMemoHook />} />
         <Route path="/useCallbackHook" element={<UseCallbackHook />} />
+        <Route path="/useRefHook" element={<UseRefHook />} />
+        <Route path="/useReducerHook" element={<UseReducerHook />} />
         <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>
