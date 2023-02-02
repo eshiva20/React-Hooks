@@ -4,8 +4,8 @@ import UseStateHook from "./React-Hooks/useStateHook/UseStateHook";
 import UseEffectHook from "./React-Hooks/useEffectHook/useEffectHook";
 import UseContextHook from "./React-Hooks/useContextHook/useContextHook";
 import UseMemoHook from "./React-Hooks/useMemoHook/useMemoHook";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-// import UseCallbackHook from './React-Hooks/useCallbackHook/useCallbackHook';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UseCallbackHook from './React-Hooks/useCallbackHook/useCallbackHook';
 import Main from './React-Hooks/Main';
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/useEffectHook" element={<UseEffectHook />} />
         <Route path="/useContextHook" element={<UseContextHook />} />
         <Route path="/useMemoHook" element={<UseMemoHook />} />
+        <Route path="/useCallbackHook" element={<UseCallbackHook />} />
         <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useMemo } from "react";
+import { Link } from 'react-router-dom';
 
 const useMemoHook = () => {
   const [count, setCount] = useState(0);
@@ -7,7 +8,7 @@ const useMemoHook = () => {
 
   const countNum = (num) => {
     console.log("countNum function is called");
-    for (let i = 0; i < 1000000000; i++) {}
+    // for (let i = 0; i < 1000000000; i++) {}
     return num;
   };
   const handleCounter = () => {
@@ -38,6 +39,7 @@ const useMemoHook = () => {
       >
         {toggle ? "I am True" : "I am false"}
       </button>
+      <Link style={{marginTop:'3rem'}} to="/">Exit to Main</Link>
     </div>
   );
 };

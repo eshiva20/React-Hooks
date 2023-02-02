@@ -1,6 +1,7 @@
 import React from 'react'
 import './useEffectHook.css'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const useEffectHook = () => {
     const [count,setCount]=useState(0)
@@ -15,6 +16,7 @@ const useEffectHook = () => {
       <h1>useEffect Hook</h1>
       <button onClick={()=>setCount(count+1)} className='effect-btn'>Increment {count}</button>
       <button onClick={()=>setCount1(count1+1)} className='effect-btn'>Increment {count1}</button>
+      <Link style={{marginTop:'3rem'}} to="/">Exit to Main</Link>
     </div>
   )
 }

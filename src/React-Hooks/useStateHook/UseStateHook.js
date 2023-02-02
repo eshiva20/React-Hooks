@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import './useStateHook.css'
+import { Link } from 'react-router-dom';
 
 const useStateHook = () => {
   let [count, setCount] = useState(1);
@@ -25,6 +26,7 @@ const useStateHook = () => {
         <span>{count}</span>
         <button className="state-btn" onClick={handleDecrease}>-</button>
       </div>
+      <Link style={{marginTop:'3rem'}} to="/">Exit to Main</Link>
     </div>
   );
 };

@@ -1,13 +1,16 @@
 import React from "react";
+import { memo } from "react";
 
-const Child = ({ addValue }) => {
-  console.log("Child Component Called",addValue);
-//   console.log();
+const Todos = ({ todos, addTodo }) => {
+  console.log("child class called");
   return (
-    <div>
-      <h3 style={{ color: "black" }}>Child Component</h3>
+    <div className="main">
+      {todos.map((todo, index) => {
+        return <span style={{fontSize:"20px"}} key={index}>{todo} {index}</span>;
+      })}
+      <button className="effect-btn" onClick={addTodo}>Add Todo</button>
     </div>
   );
 };
 
-export default Child;
+export default memo(Todos);

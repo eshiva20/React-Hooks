@@ -9,6 +9,7 @@ const Main = () => {
         <Link className="link" to="/useEffectHook">useEffect Hook</Link>
         <Link className="link" to="/useContextHook">useContext Hook</Link>
         <Link className="link" to="/useMemoHook">useMemo Hook</Link>
+        <Link className="link" to="/useCallbackHook">useCallback Hook</Link>
       </div>
   )
 }

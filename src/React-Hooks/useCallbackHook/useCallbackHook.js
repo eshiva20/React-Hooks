@@ -1,23 +1,33 @@
 import React from "react";
-import Child from "./Child";
-import { useState } from "react";
+import { useState,useCallback } from "react";
+import Todos from "./Child";
+import { Link } from 'react-router-dom';
 
 const useCallbackHook = () => {
-
   const [count, setCount] = useState(0);
-  const addValue=()=>{"add Value"}
+  const [todos, setTodos] = useState([]);
 
-//   useMemo(()=>{
+  const increment = () => {
+    setCount(count+1);
+  };
 
-//   },[count])
+  // const addTodo = () => {
+  //   setTodos((prev) => [...prev, "New Todo"]);
+  // };
+
+  const addTodo = useCallback(() => {
+    return setTodos((prev) => [...prev, "New Todo"]);
+  }, [todos]);
 
   return (
     <div className="main">
       <h1>useCallback Hook</h1>
-      <Child addValue={addValue} />
-      <button className="effect-btn" onClick={() => setCount(count + 1)}>
-        Increment {count}
-      </button>
+      <Todos todos={todos} addTodo={addTodo} />
+      ______________________________________________
+      <div>
+        <button className="effect-btn" onClick={increment}>Count is {count}</button>
+      </div>
+      <Link style={{marginTop:'3rem'}} to="/">Exit to Main</Link>
     </div>
   );
 };
